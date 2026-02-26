@@ -34,7 +34,7 @@ gem "bootsnap", require: false
 group :development, :test do
 
   gem "rspec"
-  gem 'rspec-rails', '~> 7'
+  gem 'rspec-rails', '~> 8'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
