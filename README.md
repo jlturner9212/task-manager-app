@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+rails new task-manager-app --api --database=postgresql
+rails g scaffold Task title:string description:text status:integer priority:integer due_date:date --api
+touch docker-compose.yml
+touch .env

@@ -40,3 +40,6 @@
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*
+
+# normall we would ignore the .env file here but not for demo
+#.env
