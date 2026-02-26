@@ -51,8 +51,15 @@ tasks = [
     due_date: Date.today + 7
   },
   {
-    title: "Build great things with Reveal",
-    description: "Get hired to build great applications with Reveal Technologies.",
+    title: "Hire Jeff",
+    description: "Bring on an experienced and determined developer.",
+    status: :pending,
+    priority: :high,
+    due_date: Date.today + 7
+  },
+  {
+    title: "Build amazing things",
+    description: "Build amazing - Legendary applications with Reveal.",
     status: :pending,
     priority: :high,
     due_date: Date.today + 7
