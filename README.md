@@ -9,8 +9,6 @@ A full-stack task management application built with Ruby on Rails (API) and Reac
 - **Database:** PostgreSQL 14
 - **Containerization:** Docker + Docker Compose
 
-> **Note:** I assumed no authentication was required based on the spec; this could be added via Devise + JWT
-
 ## Prerequisites
 
 - [Docker](https://www.docker.com/get-started) and Docker Compose
@@ -75,6 +73,8 @@ docker compose exec -e RAILS_ENV=test api bundle exec rspec spec/requests/api/v1
 - **React with CRA** — straightforward setup suitable for a focused assessment scope.
 - **PostgreSQL `ILIKE`** for search — avoids introducing additional dependencies like Elasticsearch for a simple text search requirement.
 - **Docker Compose** — single command setup with no local dependencies required from the reviewer.
+
+> **Note:** I assumed no authentication was required based on the spec; this could be added via Devise + JWT
 
 ## Manual Setup (without Docker)
 
