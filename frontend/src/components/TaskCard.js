@@ -5,9 +5,9 @@ const statusConfig = {
 };
 
 const priorityConfig = {
-  low:    { label: 'Low',    classes: 'text-slate-400' },
-  medium: { label: 'Medium', classes: 'text-yellow-400' },
-  high:   { label: 'High',   classes: 'text-red-400 font-bold' },
+  low:    { label: 'Low',    color: '#4ade80', count: 1 },
+  medium: { label: 'Medium', color: '#facc15', count: 2 },
+  high:   { label: 'High',   color: '#f87171', count: 3 },
 };
 
 export default function TaskCard({ task, onEdit, onDelete }) {
@@ -23,8 +23,19 @@ export default function TaskCard({ task, onEdit, onDelete }) {
           {status.label}
         </span>
       </td>
-      <td className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider ${priority.classes}`}>
-        {priority.label}
+      <td style={{ padding: '12px 16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          {[1, 2, 3].map((i) => (
+            <div key={i} style={{
+              width: '8px',
+              height: '8px',
+              borderRadius: '50%',
+              backgroundColor: i <= priority.count ? priority.color : 'rgba(255,255,255,0.1)',
+              border: `1px solid ${i <= priority.count ? priority.color : 'rgba(255,255,255,0.15)'}`,
+              boxShadow: i <= priority.count ? `0 0 6px ${priority.color}` : 'none',
+            }} />
+          ))}
+        </div>
       </td>
       <td className="px-4 py-3 text-sm text-slate-500 font-mono">{task.due_date || '—'}</td>
       <td style={{ padding: '12px 16px' }}>
